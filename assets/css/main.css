@@ -101,6 +101,7 @@ html, body
 .nav-item:hover
 {
     color: #292929;
+    font-weight: bold;
 }
 
 .nav-item:hover > span
