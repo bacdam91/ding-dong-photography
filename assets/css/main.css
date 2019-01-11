@@ -249,13 +249,13 @@ footer p > i
 #gallery-container
 {
     display: block;
-    position: absolute;    
+    position: relative;    
     height: 400px;
     width: auto;
     overflow-x: visible;
     overflow-y: hidden;
     white-space: nowrap;
-    top: 50%;
+    top: calc(50% - 100px);
     left: 0;
     transform: translate(0, -50%);
 }
@@ -266,9 +266,12 @@ footer p > i
     position: relative;
     height: 100%;
     width: auto;
+    transition: 0.2s;
+    cursor: pointer;
 }
 
-::-webkit-scrollbar
+
+#gallery-container::-webkit-scrollbar
 {
     background: transparent;
 }
