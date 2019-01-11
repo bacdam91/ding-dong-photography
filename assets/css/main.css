@@ -11,6 +11,8 @@
     --extra-padding: 32px;
     --main-margin: 32px;
     --extra-margin: 64px;
+    --less-margin: 16px;
+    --small-margin: 8px;
 }
 
 *
@@ -134,4 +136,30 @@ html, body
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
+}
+
+.company-name-container
+{
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.company-name-container h2
+{
+    font-family: var(--secondary-font-family);
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+
+.company-name-container h4 
+{
+    margin-top: 4px;
+    font-family: var(--main-font-family);
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.54em;
+    color: #a1a1a1;
 }
