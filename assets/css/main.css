@@ -28,6 +28,17 @@ html, body
     width: 100%;
 }
 
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000000;
+}
+
 .navigation-bar
 {
     position: fixed;
@@ -70,7 +81,7 @@ html, body
     display: grid;
     position: relative;
     grid-auto-rows: 50px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: stretch;
     text-align: center;
     letter-spacing: var(--main-letter-spacing);
@@ -141,7 +152,7 @@ html, body
 .company-name-container
 {
     display: grid;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -151,7 +162,7 @@ html, body
 {
     font-family: var(--secondary-font-family);
     text-align: center;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.35em;
 }
 
 .company-name-container h4 
@@ -162,4 +173,33 @@ html, body
     text-align: center;
     letter-spacing: 0.54em;
     color: #a1a1a1;
+}
+
+.secondary-navigation
+{
+    display: block;
+    position: relative;
+    margin-top: var(--less-margin);
+    text-align: center;
+}
+
+.secondary-navigation li
+{
+    display: inline-block;
+    color: var(--main-text-color);
+}
+
+.secondary-navigation li a
+{
+    padding: 0 var(--main-padding);
+    color: var(--main-text-color);
+    transition: 0.2s;
+    font-size: var(--main-font-size);
+    letter-spacing: var(--main-letter-spacing);
+}
+
+.secondary-navigation li a:hover
+{
+    text-decoration: underline;
+    color: #000000;
 }
