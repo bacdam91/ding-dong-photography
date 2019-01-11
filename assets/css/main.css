@@ -65,9 +65,15 @@ a
     margin-left: var(--extra-margin);
     width: auto;
     height: 35px;
-    top: 50%;
-    transform: translate(0, -50%);
+    margin-top: 7px;
     cursor: pointer;
+    transition: 0.2s;
+    transform-origin: center;
+}
+
+.logo-container img:hover
+{
+    transform: rotate(180deg)
 }
 
 .toolbar-container
