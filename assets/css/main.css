@@ -10,6 +10,7 @@
     --main-padding: 12px;
     --extra-padding: 32px;
     --main-margin: 32px;
+    --extra-margin: 64px;
 }
 
 *
@@ -44,14 +45,16 @@ html, body
     left: 16px;
 }
 
-.logo
+.logo-container img 
 {
-    display: grid;
+    display: block;
     position: relative;
-    margin-left: var(--main-margin);
-    font-weight: bolder;
-    line-height: 50px;
-    grid-template-rows: repeat(2, 1fr);
+    margin-left: var(--extra-margin);
+    width: auto;
+    height: 35px;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
 }
 
 .toolbar-container
