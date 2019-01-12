@@ -162,6 +162,7 @@ h1, h2, h3, h4, h5, h6
 
 #splash-screen
 {
+    position: absolute;
     padding-top: 0;
     height: 100%;
 }
@@ -192,13 +193,85 @@ h1, h2, h3, h4, h5, h6
     letter-spacing: 0.54em;
     color: #a1a1a1;
     cursor: pointer;
+    margin-bottom: var(--small-margin);
+}
+
+.bg-logo-container
+{
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+.logo-sketch-animated
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    stroke-width: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    stroke-dasharray: 591;
+}
+
+.logo-sketch-animated .logo-yellow
+{
+    animation: animate-yellow 2s forwards;
+}
+
+.logo-sketch-animated .logo-pink
+{
+    animation: animate-pink 2s forwards;
+}
+
+@keyframes animate-yellow
+{
+    0%
+    {
+        stroke-dashoffset: 591;
+        fill: none;
+    }
+
+    60%
+    {
+        stroke-dashoffset: 0;
+        fill: rgba(239, 217, 20, 0);
+    }
+
+    100%
+    {
+        fill: rgba(239, 217, 20, 255);
+    }
+}
+
+@keyframes animate-pink
+{
+    0%
+    {
+        stroke-dashoffset: 591;
+        fill: none;
+    }
+
+    60%
+    {
+        stroke-dashoffset: 0;
+        fill: rgba(238, 35, 69, 0);
+    }
+
+    100%
+    {
+        fill: rgba(238, 35, 69, 255);
+    }
 }
 
 .secondary-navigation
 {
     display: block;
     position: relative;
-    margin-top: var(--less-margin);
+    margin-top: var(--small-margin);
     text-align: center;
 }
 
@@ -231,6 +304,7 @@ footer
     height: 100px;
     bottom: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 footer p 
