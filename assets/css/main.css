@@ -2,6 +2,7 @@
 {
     --main-text-color: #929292;
     --main-font-size: 0.8em;
+    --secondary-font-size: 0.9em;
     --main-font-family: 'Pontano Sans', sans-serif;
     --secondary-font-family: 'Yeseva One', cursive;
     --main-letter-spacing: 0.1em;
@@ -307,17 +308,10 @@ footer
     
 }
 
-#home-footer
-{
-    position: relative;
-    display: block;
-    height: 50px;
-    margin-top: var(--extra-margin);
-    margin-bottom: var(--main-margin);
-}
-
 footer p 
 {
+    display: block;
+    position: relative;
     color: var(--main-text-color);
     text-align: center;
     font-size: var(--main-font-size);
@@ -327,6 +321,62 @@ footer p
 footer p > i 
 {
     margin-right: var(--small-margin);
+}
+
+#home-footer
+{
+    position: relative;
+    display: block;
+    margin-top: var(--extra-margin);
+    padding-bottom: var(--extra-padding);
+}
+
+#home-footer div:last-child
+{
+    margin-bottom: var(--main-margin);
+}
+
+.sitemap
+{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(7 , 1fr);
+    grid-auto-rows: 20px;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: var(--main-margin);
+    text-align: center;
+}
+
+.sitemap a 
+{
+    color: var(--main-text-color);
+    font-size: var(--main-font-size);
+}
+
+.sitemap a:hover
+{
+    text-decoration: underline;
+}
+
+.footer-logo-container
+{
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-bottom: var(--small-margin);
+}
+
+.footer-logo-container img
+{
+    display: block;
+    position: relative;
+    height: 60%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -18%);
 }
 
 #gallery-container
@@ -363,9 +413,8 @@ footer p > i
 {
     display: block;
     position: relative;
+    min-height: 90%;
     width: 100%;
-    height: 100%;
-    background-color: none;
 }
 
 .decor-bg::after
@@ -376,7 +425,7 @@ footer p > i
     width: 100%;
     height: 100%;
     background-image: url("../img/bg/bg.png");
-    background-size: 60%;
+    background-size: 800px;
     opacity: 0.4;
     z-index: -1;
     top: 0;
@@ -388,14 +437,6 @@ footer p > i
     display: block;
     position: relative;
     height: 100%;
-    width: 100%;
-}
-
-.wrapper
-{
-    display: block;
-    position: relative;
-    height: 90%;
     width: 100%;
 }
 
@@ -442,3 +483,112 @@ footer p > i
     border-bottom: 5px solid var(--primary-accent-color);
 }
 
+.outer-content-container
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-content-container
+{
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#services
+{
+    height: 0;
+    min-height: 90%;
+}
+
+.services-container
+{
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 5fr 3fr;
+    
+}
+
+.service-packages-container
+{
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.package-item
+{
+    display: grid;
+    position: relative;
+    margin-bottom: var(--less-margin);
+    background-color: #fefefe;
+    box-shadow: 3px 3px 3px #a1a1a1;
+    grid-template-rows: 40px fit-content(40%) fit-content(20%);
+}
+
+.package-item div:first-child
+{
+    display: grid;
+    position: relative;
+    background-color: #121212;
+    grid-template-columns: 5fr 1fr;
+}
+
+.package-item div:first-child .package-header
+{
+    position: relative;
+    display: grid;
+    align-content: center;
+    color: var(--primary-accent-color);
+}
+
+.package-header h3
+{
+    padding-left: var(--extra-padding);
+    letter-spacing: var(--main-letter-spacing);
+    font-weight: 100;
+}
+
+.package-item div:first-child .price-container
+{
+    position: relative;
+    display: grid;
+    align-content: center;
+    background-color: var(--primary-accent-color);
+}
+
+.price-container span
+{
+    position: relative;
+    display: block;
+    text-align: right;
+    padding-right: var(--main-padding);
+    font-weight: bold;
+    letter-spacing: var(--main-letter-spacing);
+}
+
+.package-blurb
+{
+    display: block;
+    position: relative;
+    padding: var(--main-padding) var(--extra-padding);
+    font-size: var(--secondary-font-size);
+    background-color: rgb(252, 228, 214);
+}
+
+.inclusion-list 
+{
+    display: block;
+    position: relative;
+    padding: var(--main-padding) var(--extra-padding);
+    list-style: disc inside;
+}
