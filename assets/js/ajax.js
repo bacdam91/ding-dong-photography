@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-    getPhotosFromFolder();
+    //getPhotosFromFolder();
 });
 
 function getPhotosFromFolder()

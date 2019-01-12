@@ -3,10 +3,10 @@
     --main-text-color: #929292;
     --main-font-size: 0.8em;
     --main-font-family: 'Pontano Sans', sans-serif;
-    --secondary-font-family: 'Abril Fatface', cursive;
+    --secondary-font-family: 'Yeseva One', cursive;
     --main-letter-spacing: 0.1em;
     --main-letter-spacing-hover: 0.15em;
-    --primary-accent-color: #dfca57;;
+    --primary-accent-color: #eca011;
     --main-padding: 12px;
     --extra-padding: 32px;
     --main-margin: 32px;
@@ -53,9 +53,9 @@ h1, h2, h3, h4, h5, h6
     width: 100%;
     height: 50px;
     background-color: #ffffff;
-    box-shadow: 3px 3px 3px #efefef;
+    box-shadow: 0px 1px 1px #a1a1a1;
     z-index: 1000;
-    opacity: 0.8;
+    opacity: 0.90;
 }
 
 .logo-container
@@ -71,8 +71,8 @@ h1, h2, h3, h4, h5, h6
     position: relative;
     margin-left: var(--extra-margin);
     width: auto;
-    height: 35px;
-    margin-top: 7px;
+    height: 30px;
+    margin-top: 10px;
     cursor: pointer;
     transition: 0.2s;
     transform-origin: center;
@@ -176,11 +176,10 @@ h1, h2, h3, h4, h5, h6
     transform: translate(-50%, -50%);
 }
 
-.company-name-container h2
+.company-name-container h1
 {
-    font-family: var(--secondary-font-family);
     text-align: center;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.1em;
     cursor: pointer;
 }
 
@@ -305,6 +304,16 @@ footer
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
+    
+}
+
+#home-footer
+{
+    position: relative;
+    display: block;
+    height: 50px;
+    margin-top: var(--extra-margin);
+    margin-bottom: var(--main-margin);
 }
 
 footer p 
@@ -349,3 +358,87 @@ footer p > i
 {
     background: transparent;
 }
+
+.wrapper
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+}
+
+.decor-bg::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg/bg.png");
+    background-size: 60%;
+    opacity: 0.4;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.home-main-container
+{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper
+{
+    display: block;
+    position: relative;
+    height: 90%;
+    width: 100%;
+}
+
+.half-ht-wrapper
+{
+    display: block;
+    position: relative;
+    height: 60%;
+    width: 100%;
+}
+
+.break-banner
+{
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-color: #222222;
+}
+
+.break-banner::after
+{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    top: 100%;
+    left: 0;
+    background: #f6e6b4; /* Old browsers */
+    background: -moz-linear-gradient(left, #f6e6b4 0%, #ed9017 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f6e6b4 0%,#ed9017 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #f6e6b4 0%,#ed9017 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=1 ); /* IE6-9 */*/
+}
+
+.break-banner-half
+{
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 100%;
+    background-color: #111111;
+    border-bottom: 5px solid var(--primary-accent-color);
+}
+
