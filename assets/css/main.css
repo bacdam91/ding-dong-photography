@@ -592,3 +592,11 @@ footer p > i
     padding: var(--main-padding) var(--extra-padding);
     list-style: disc inside;
 }
+
+.fb-share-button span
+{
+    margin-top: var(--main-margin);
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
