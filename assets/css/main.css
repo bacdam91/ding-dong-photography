@@ -172,7 +172,7 @@ ul li
     position: relative;
     width: 100%;
     height: fit-content;
-    top: 90%;
+    top: 95%;
     left: 0;
     transform: translate(0, -100%);
     color: var(--inactive-text-color);
