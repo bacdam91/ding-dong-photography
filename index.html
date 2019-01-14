@@ -17,6 +17,16 @@
 </head>
 <body>
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div class="main-containe">
         <div class="decor-bg"></div>
         <div class="container" id="splash-screen">
@@ -54,6 +64,14 @@
             <p><i class="fas fa-mobile-alt"></i>0432 231 210</p>
             <p><i class="fab fa-facebook-square"></i>@DingDongPhotography</p>
             <p><i class="fas fa-envelope"></i>dingdongphotography@outlook.com</p>
+            <p>
+                <div class="fb-share-button" data-href="http://www.jlampstudio.com/dingdongphotography/" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                    <a 
+                        target="_blank"              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.jlampstudio.com%2Fdingdongphotography%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                        Share
+                    </a>
+                </div>
+            </p>
         </div>
     </footer>
 
