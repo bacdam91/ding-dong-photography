@@ -1,0 +1,62 @@
+.animated-logo
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    stroke-width: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    stroke-dasharray: 591;
+}
+
+.animated-logo .logo-yellow
+{
+    animation: animate-yellow 2s forwards;
+}
+
+.animated-logo .logo-pink
+{
+    animation: animate-pink 2s forwards;
+}
+
+@keyframes animate-yellow
+{
+    0%
+    {
+        stroke-dashoffset: 591;
+        fill: none;
+    }
+
+    60%
+    {
+        stroke-dashoffset: 0;
+        fill: rgba(239, 217, 20, 0);
+    }
+
+    100%
+    {
+        fill: rgba(239, 217, 20, 255);
+    }
+}
+
+@keyframes animate-pink
+{
+    0%
+    {
+        stroke-dashoffset: 591;
+        fill: none;
+    }
+
+    60%
+    {
+        stroke-dashoffset: 0;
+        fill: rgba(238, 35, 69, 0);
+    }
+
+    100%
+    {
+        fill: rgba(238, 35, 69, 255);
+    }
+}
