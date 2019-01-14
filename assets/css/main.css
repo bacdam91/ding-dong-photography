@@ -600,3 +600,13 @@ footer p > i
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+.twitter-button-container
+{
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: var(--main-margin);
+}

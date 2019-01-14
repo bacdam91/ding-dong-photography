@@ -53,10 +53,39 @@
                     <li><a class="nav-item-clickable" href="home.html#about" name="about">About</a>|</li>
                     <li><a class="nav-item-clickable" href="home.html#enquire" name="enquire">Enquire</a></li>                
                 </ul>
-                <div class="fb-share-button" data-href="http://www.jlampstudio.com/dingdongphotography/" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                <div 
+                    class="fb-share-button" data-href="http://www.jlampstudio.com/dingdongphotography/" data-layout="button_count" data-size="large" data-mobile-iframe="true">
                     <a 
-                        target="_blank"              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.jlampstudio.com%2Fdingdongphotography%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                        target="_blank"              
+                        href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.jlampstudio.com%2Fdingdongphotography%2F&amp;src=sdkpreparse" 
+                        class="fb-xfbml-parse-ignore">
                         Share
+                    </a>
+                </div>
+                <script>
+                window.twttr = (function(d, s, id) 
+                {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      t = window.twttr || {};
+                    if (d.getElementById(id)) return t;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  
+                    t._e = [];
+                    t.ready = function(f) 
+                    {
+                      t._e.push(f);
+                    };
+                        return t;
+                    }(document, "script", "twitter-wjs"));
+                </script>
+                <div class="twitter-button-container">
+                    <a 
+                        class="twitter-share-button" 
+                        href="https://twitter.com/intent/tweet?text=Not%20much%20to%20say.%20A%20lot%20to%20see.">
+                        Tweet
                     </a>
                 </div>
             </div>
