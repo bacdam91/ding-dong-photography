@@ -1,7 +1,7 @@
 :root
 {
     --main-font-family: 'Pontano Sans', sans-serif;
-    --secondary-font-family: 'Yeseva One', cursive;
+    --secondary-font-family: 'Playfair Display SC', serif;
     --inactive-text-color: #9c9c9c;
     --sm-letter-spacing: 2px;
     --med-letter-spacing: 4px;
@@ -135,7 +135,7 @@ ul li
 .company-name h1
 {
     font-family: var(--secondary-font-family);
-    letter-spacing: var(--lg-letter-spacing);
+    letter-spacing: var(--med-letter-spacing);
 }
 
 .company-name h4
