@@ -1,0 +1,220 @@
+:root
+{
+    --main-font-family: 'Pontano Sans', sans-serif;
+    --secondary-font-family: 'Playfair Display SC', serif;
+    --inactive-text-color: #9c9c9c;
+    --sm-letter-spacing: 2px;
+    --med-letter-spacing: 4px;
+    --lg-letter-spacing: 6px;
+    --xlg-letter-spacing: 8px;
+    --sm-padding: 8px;
+    --med-padding: 16px;
+    --lg-padding: 32px;
+    --sm-margin: 8px;
+    --med-margin: 16px;
+    --lg-margin: 32px;
+    --sm-font-size: 0.9em;
+    
+}
+
+*
+{
+    box-sizing: border-box;
+    font-family: var(--main-font-family);
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--inactive-text-color);
+}
+
+a:hover
+{
+    text-decoration: underline;
+    color: #212121;
+}
+
+html, body, ul, h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+}
+
+ul li
+{
+    list-style: none;
+}
+
+.bg-decor
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-decor::after
+{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/backgrounds/bg-04.png");
+    z-index: -1;
+
+}
+
+.main-container
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-logo-container
+{
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 100%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.container 
+{
+    display: grid;
+    position: relative;
+}
+
+#splash-screen
+{
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(1, 1fr) auto repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.company-name-container
+{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    position: relative;
+    grid-template-rows: 3fr 2fr 3fr;
+}
+
+.company-name
+{
+    align-self: end;
+}
+
+.company-name h1, .company-name h4
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.company-name h1
+{
+    font-family: var(--secondary-font-family);
+    letter-spacing: var(--med-letter-spacing);
+}
+
+.company-name h4
+{
+    letter-spacing: var(--xlg-letter-spacing);
+    color: var(--inactive-text-color);
+    font-weight: 100;
+}
+
+.splash-navigation
+{
+    display: block;
+    position: relative;
+    width: fit-content;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.splash-navigation li 
+{
+    color: var(--inactive-text-color);
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.splash-navigation li a 
+{
+    padding: var(--sm-padding) var(--sm-padding);
+    font-size: var(--sm-font-size);
+}
+
+.company-info
+{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    top: 95%;
+    left: 0;
+    transform: translate(0, -100%);
+    color: var(--inactive-text-color);
+    font-size: var(--sm-font-size);
+    text-align: center;
+}
+
+.company-info p
+{
+    position: relative;
+    display: block;
+    margin: var(--sm-margin) auto;
+}
+
+.company-info p i 
+{
+    margin-right: var(--sm-margin);
+}
+
+@media only screen and (min-width: 768px)
+{
+    #splash-screen 
+    {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .company-name-container
+    {
+        grid-row-start: 3;
+        grid-column-start: 3;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .company-info
+    {
+        grid-row-start: 5;
+        grid-column-start: 3;
+    }
+}   

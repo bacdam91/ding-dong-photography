@@ -45,6 +45,7 @@ html, body
 {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 ul li
@@ -52,144 +53,25 @@ ul li
     list-style: none;
 }
 
-.bg-decor
-{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.bg-decor::after
-{
-    content: "";
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/backgrounds/bg-04.png");
-    z-index: -1;
-
-}
-
-.main-container
-{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.animated-logo-container
-{
-    display: block;
-    position: relative;
-    height: 30px;
-    width: 100%;
-    align-self: center;
-    cursor: pointer;
-}
-
-.container 
-{
-    display: grid;
-    position: relative;
-}
-
-#splash-screen
-{
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(1, 1fr) auto repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.company-name-container
-{
-    grid-column-start: 2;
-    grid-row-start: 2;
-    display: grid;
-    position: relative;
-    grid-template-rows: 3fr 2fr 3fr;
-}
-
-.company-name
-{
-    align-self: end;
-}
-
-.company-name h1, .company-name h4
-{
-    display: block;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-}
-
-.company-name h1
-{
-    font-family: var(--secondary-font-family);
-    letter-spacing: var(--med-letter-spacing);
-}
-
-.company-name h4
-{
-    letter-spacing: var(--xlg-letter-spacing);
-    color: var(--inactive-text-color);
-    font-weight: 100;
-}
-
-.splash-navigation
-{
-    display: block;
-    position: relative;
-    width: fit-content;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.splash-navigation li 
-{
-    color: var(--inactive-text-color);
-    display: inline-block;
-    position: relative;
-    text-align: center;
-}
-
-.splash-navigation li a 
-{
-    padding: var(--sm-padding) var(--sm-padding);
-    font-size: var(--sm-font-size);
-}
-
 .company-info
 {
-    grid-column-start: 2;
-    grid-row-start: 3;
-    display: block;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    top: 95%;
-    left: 0;
-    transform: translate(0, -100%);
+    position: absolute;
+    display: grid;
+    top: var(--lg-margin);
+    right: var(--lg-margin);
     color: var(--inactive-text-color);
-    font-size: var(--sm-font-size);
-    text-align: center;
+    align-content: stretch;
+    grid-auto-rows: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .company-info p
 {
     position: relative;
     display: block;
-    margin: var(--sm-margin) auto;
+    margin: 0;
+    text-align: right;
 }
 
 .company-info p i 
@@ -197,24 +79,94 @@ ul li
     margin-right: var(--sm-margin);
 }
 
-@media only screen and (min-width: 768px)
+.animated-logo-container
 {
-    #splash-screen 
-    {
-        grid-template-columns: repeat(2, 1fr) auto repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-    }
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 36px;
+    justify-self: right;
+}
 
-    .company-name-container
-    {
-        grid-row-start: 3;
-        grid-column-start: 3;
-        grid-template-rows: repeat(3, 1fr);
-    }
+#splash-screen
+{
+    display: grid;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    transform: rotate(-20deg) scale(1.5);
+}
 
-    .company-info
-    {
-        grid-row-start: 5;
-        grid-column-start: 3;
-    }
-}   
+.bg-decor
+{
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-end: 5;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.bg-pink
+{
+    grid-row: 1 / span 7;
+    grid-column: 1 / span 7;
+    background-color: #ee2345;
+}
+
+.splash-navigation
+{
+    grid-row: 5;
+    grid-column: 4 / span 2;
+    align-self: flex-start;
+}
+
+.splash-navigation li 
+{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.splash-navigation li a 
+{
+    padding: var(--sm-padding) var(--sm-padding);
+    font-size: var(--sm-font-size);
+    color: #fff;
+}
+
+#splash-screen h1
+{
+    text-align: right;
+    height: fit-content;
+    align-self: flex-end;
+    font-size: 8em;
+    color: #fff;
+    font-family: var(--secondary-font-family);
+    letter-spacing: var(--lg-letter-spacing);
+}
+
+#ding-logo
+{
+    grid-row: 3;
+    grid-column: 2 / span 2;
+}
+
+#dong-logo
+{
+    grid-row: 4;
+    grid-column: 2 / span 2;
+}
+
+#splash-screen h4
+{
+    grid-row: 4;
+    grid-column: 4 / span 2;
+    align-self: flex-end;
+    font-size: 6em;
+    letter-spacing: var(--lg-letter-spacing);
+}
