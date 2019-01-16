@@ -5,9 +5,9 @@ $(document).ready(function()
     {
         if($(window).width() < 769)
         {
-                event.stopPropagation();
-                $("#menu").slideUp();
-                $("#hamburger-nav").removeClass("ham-nav-clicked");
+            event.stopPropagation();
+            $("#menu").slideUp();
+            $("#hamburger-nav").removeClass("ham-nav-clicked");
         }
     });
 
