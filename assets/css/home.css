@@ -3,6 +3,7 @@
     --main-font-family: 'Pontano Sans', sans-serif;
     --secondary-font-family: 'Yeseva One', cursive;
 
+    --xsm-letter-spacinig: 1px;
     --sm-letter-spacing: 2px;
     --med-letter-spacing: 4px;
     --lg-letter-spacing: 6px;
@@ -18,13 +19,18 @@
 
     --sm-font-size: 0.9em;
 
+    --sm-line-height: 0.9em;
+
     --med-grid-gap: 16px;
 
     --darkest-grey: #212121;
     --accent-yellow: #efd914;
+    --accent-pink: #ee2345;
     --accent-salmon: rgb(252, 228, 214);
     --inactive-text-color: #9c9c9c;
     --box-shadow-color: #a1a1a1;
+    --main-grey-color: #f1f1f1;
+    --secondary-grey-color: #b3b3b3;
 }
 
 *
@@ -60,6 +66,147 @@ html, body
 ul li
 {
     list-style: none;
+}
+
+nav.navigation
+{
+    position: fixed;
+    display: grid;
+    height: 50px;
+    width: 100%;
+    background-color: var(--main-grey-color);
+    grid-template-columns: 50px auto 50px 50px;
+    grid-auto-rows: 50px;
+    box-shadow: 3px 3px 3px var(--box-shadow-color);
+    z-index: 1000;
+}
+
+.logo-container
+{
+    position: relative;
+    display: block;
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    margin-left: var(--med-margin);
+    cursor: pointer;
+}
+
+.logo-container img
+{
+    position: relative;
+    display: block;
+    height: 30px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+}
+
+.logo-container:hover img
+{
+    transform: rotate(180deg);
+}
+
+#login-nav
+{
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--secondary-grey-color);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#login-nav > i
+{
+    line-height: 50px;
+}
+
+#login-nav > span
+{
+    display: none;
+}
+
+#hamburger-nav
+{
+    grid-column: 4;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--secondary-grey-color);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#hamburger-nav:hover, #login-nav:hover
+{
+    color: white;
+    background-color: var(--secondary-grey-color);
+}
+
+#hamburger-nav i 
+{
+    transition: 0.2;
+    line-height: 50px;
+}
+
+.ham-nav-clicked
+{
+    background-color: var(--secondary-grey-color);
+}
+
+.ham-nav-clicked i 
+{
+    color: white;
+}
+
+.toolbar
+{
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: fit-content;
+    width: 100%;    
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 3px 3px 3px var(--box-shadow-color);
+}
+
+#menu
+{
+    display: none;
+}
+
+.nav-item
+{
+    display: block;
+    position: relative;
+    height: 30px;
+    margin: var(--med-margin);
+    line-height: 15px;
+    border-bottom: 1px solid var(--main-grey-color);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.nav-item:hover 
+{
+    font-weight: bold;
+}
+
+#menu .nav-item:nth-last-child(2)
+{
+    border-bottom: none;
+}
+
+#menu .nav-item:last-child
+{
+    display: none;
 }
 
 .home-main-container
@@ -173,8 +320,80 @@ ul li
     box-shadow: 3px 2px 12px var(--box-shadow-color);
 }
 
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 769px)
 {
+    nav.navigation
+    {
+        grid-template-columns: 50px repeat(2, auto);
+    }
+
+    #hamburger-nav, #login-nav
+    {
+        display: none;
+    }
+
+    #menu
+    {
+        display: block;
+        position: relative;
+        grid-column: 3;
+        grid-row: 1;
+        top: 0;
+        background-color: transparent;
+        width: fit-content;
+        height: 100% !important;
+        align-self: stretch;
+        box-shadow: none;
+        justify-self: right;
+        margin-right: var(--med-margin);
+    }
+
+    #menu .nav-item
+    {
+        display: inline-block;
+        margin: 0;
+        text-align: center;
+        line-height: 50px;
+        width: fit-content;
+        height: 100% !important;
+        font-size: var(--sm-font-size);
+        padding: 0 var(--sm-padding);
+        border: none;
+        color: var(--secondary-grey-color);
+        transition: 0.2s;
+        cursor: pointer;
+        letter-spacing: var(--xsm-letter-spacing);
+    }
+
+    #menu .nav-item:hover
+    {
+        color: var(--darkest-grey);
+    }
+
+    #menu .nav-item:last-child
+    {
+        display: inline-block;
+    }
+
+    #menu .nav-item span
+    {
+        display: block;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 5px;
+        transform: translate(-50%, 0);
+        background-color: var(--accent-yellow);
+        transition: 0.2s;
+    }
+
+    #menu .nav-item:hover span
+    {
+        width: 100%;
+    }
 
     #services
     {
