@@ -91,6 +91,7 @@ input[type="submit"]
     background-color: var(--pink-accent-color);
     border: 1px solid var(--pink-accent-color);
     transition: 0.2s;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover
