@@ -126,6 +126,32 @@ nav
     box-shadow: 0px 3px 12px var(--box-shadow-color);
 }
 
+#menu
+{
+    position: fixed;
+    overflow: hidden;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    transition: 0.2s;
+    max-height: 0;
+    grid-auto-rows: 50px;
+    background-color: white;
+    z-index: 900;
+}
+
+#menu-controller:checked + ul#menu
+{
+    max-height: 500px;
+    transition: 0.2s; 
+}
+
+#menu li a
+{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
 ul li
 {
     list-style: none;
