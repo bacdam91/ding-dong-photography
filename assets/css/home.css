@@ -50,6 +50,25 @@ footer
     min-height: 50px;
     width: 100%;
     color: white;
+    grid-template-rows: 100px auto 50px;
+}
+
+footer .logo-container
+{
+    align-self: center;
+    justify-self: center;
+}
+
+footer ul
+{
+    grid-gap: 0.25rem;
+    justify-content: center;
+    text-align: center;
+}
+
+footer ul li i 
+{
+    margin-right: 10px;
 }
 
 h1, h2
@@ -332,6 +351,28 @@ section
 #contact form.grid-container
 {
     grid-gap: 0.5rem;
+}
+
+#contact form.grid-container + div.grid-container
+{
+    justify-content: center;
+    text-align: center;
+    grid-gap: 0.5rem;
+    margin-top: var(--lg-margin);
+    margin-bottom: var(--lg-margin);
+    grid-template-rows: 100px auto;
+}
+
+.icon-container
+{
+    color: var(--footer-color-solid);
+}
+
+.icon-container > *
+{
+    width: 100%;
+    margin-top: var(--lg-margin);
+    margin-bottom: var(--lg-margin);
 }
 
 #package-inclusion-container
