@@ -22,216 +22,239 @@
                 <img src="assets/img/svg/logo.svg" alt="logo">
             </div>
             
-            <div id="login-nav"><i class="fas fa-user"></i></div>
-            <label for="menu-controller"><div id="hamburger-nav"><i class="fas fa-bars"></i></div></label>
-            <input class="display-none" type="checkbox" name="menu-controller" id="menu-controller">
-            <ul class="grid-container" id="menu">
+            <label for="menu-login" id="login-nav-label">
+                <div id="login-nav">
+                    <i class="fas fa-user"></i>
+                </div>
+            </label>
+
+            <input class="display-none" type="radio" name="menu-controller" id="menu-login">
+            <div class="grid-container drop-down-menu" id="login-container">
+                <h5>Client Login</h5>
+                <form class="grid-container" action="login.php" method="post">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <input type="submit" value="Login" name="submit">
+                </form>
+            </div>
+
+            <label for="menu-nav" id="hamburger-nav-label">
+                <div id="hamburger-nav">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </label>
+
+            <input class="display-none" type="radio" name="menu-controller" id="menu-nav">
+            <ul class="grid-container drop-down-menu">
                 <li><label for="menu-controller"></label><a href="#about">About Me</a></label></li>
                 <li><label for="menu-controller"></label><a href="#portfolio">My Portfolio</a></label></li>
                 <li><label for="menu-controller"></label><a href="#services">My Services</a></label></li>
                 <li><label for="menu-controller"></label><a href="#contact">Contact Me</a></label></li>
             </ul>
+            
+            <input class="display-none" type="radio" name="menu-controller" id="menu-main" checked>
         </nav>
 
-        <main class="grid-container">
-            
-            <section class="grid-container jumbotron" id="jumbotron">
-                <div class="grid-container section-header">
-                    <!--This header is hidden behind the nav-bar so there is no content in here-->
-                </div>
-                <div class="grid-container section-content">
-                    <!--This is where the jumbotron or other promotional offers will be displayed-->
-                    <ul class="gallery-spinner">
-                        <li class="spinner-item"><img src="" alt="sentry"></img></li>
-                    </ul>
-                </div>
-                <div class="grid-container section-footer">
-                </div>
-            </section>
-            
-            <section class="grid-container" id="about">
-                <div class="grid-container section-header">
-                    <h2>About Me</h2>
-                </div>
-                <div class="grid-container section-content">
-                    <h3>A bet worth making</h3>
-                    <p>
-                        Certainly elsewhere my do allowance at. 
-                        The address farther six hearted hundred towards husband. Are securing off occasion remember daughter replying. Held that feel his see own yet. Strangers ye to he sometimes propriety in. She right plate seven has. Bed who perceive judgment did marianne. Too cultivated use solicitude frequently. Dashwood likewise up consider continue entrance ladyship oh. Wrong guest given purse power is no. Friendship to connection an am considered difficulty. Country met pursuit lasting moments why calling certain the.
-                        Middletons boisterous our way understood law. Among state cease how and sight since shall. Material did pleasure breeding our humanity she contempt had. So ye really mutual no cousin piqued summer result.
-                    </p>
-                    
-                    <img src="assets/img/photos/profile.jpg" alt="Dong Dam">
-                </div>
-                <div class="grid-container section-footer">
-                </div>
-            </section>
-            
-            <section class="grid-container" id="portfolio">
-                <div class="grid-container section-header">
-                    <h2>From My Portfolio</h2>
-                </div>
-                <div class="grid-container section-content">
-                    <div class="grid-container picture-frame">
-                        <h4>Good food!</h4>
-                        <img src="" alt="Good food!"> 
-                        <h6>2019-01-01</h6>
+        <label for="menu-main">
+            <main class="grid-container">
+                
+                <section class="grid-container jumbotron" id="jumbotron">
+                    <div class="grid-container section-header">
+                        <!--This header is hidden behind the nav-bar so there is no content in here-->
                     </div>
-                    
-                    <div class="grid-container picture-frame">
-                        <h4>A bird on a post</h4>
-                        <img src="" alt="A bird on a post"> 
-                        <h6>2018-12-24</h6>
-                    </div>
-                    
-                    <div class="grid-container picture-frame">
-                        <h4>Nothing sweeter!</h4>
-                        <img src="" alt="Nothing sweeter!"> 
-                        <h6>2015-03-08</h6>
-                    </div>
-                    
-                    <div class="grid-container picture-frame">
-                        <h4>Beautiful in white</h4>
-                        <img src="" alt="Beautiful in white"> 
-                        <h6>2015-11-17</h6>
-                    </div>
-                    
-                    <h4>See more-></h4>
-                    
-                </div>
-                <div class="grid-container section-footer">
-                </div>
-            </section>
-            
-            <section class="grid-container" id="services">
-                <div class="grid-container section-header">
-                    <h2>My Services</h2>
-                </div>
-                <div class="grid-container section-content">
-                    <div class="grid-container" id="package-inclusion-container">
-                        <h3>Catering for your needs!</h3>
-                        <strong>All packages include:</strong>
-                        <ol>
-                            <li>Online gallery hosting and ZIP file download</li> 
-                            <li>Printable high resolution files</li>
-                            <li>Early arrival for preparation</li>   
-                            <li>Editing of all images</li>
-                            <li>Travel cost (unless 30 minutes away from Heidelberg, VIC)</li>
-                        </ol>
-                        <hr>
-                        <strong>Extra services</strong>
-                        <ul>
-                            <li>$150.00/hr after 4 hours of photography coverage</li>
+                    <div class="grid-container section-content">
+                        <!--This is where the jumbotron or other promotional offers will be displayed-->
+                        <ul class="gallery-spinner">
+                            <li class="spinner-item"><img src="" alt="sentry"></img></li>
                         </ul>
-                        <hr>
-                        <strong>Hours of service</strong>
-                        <ul>
-                            <li>Available as early as you need me all the way to midnight</li>
-                        </ul>
-                            
                     </div>
-                    <ul class="grid-container">
-                        <input type="radio"  class="display-none" name="package" id="package-01">
-                        <li>
-                            <label for="package-01">
-                                <div class="grid-container package-item">
-                                    <h5>Package #1</h5>
-                                    <h5>$450.00</h5>
-                                    <div class="grid-container package-desc">
-                                        <p class="package-blurb">
-                                            If you want something different from the norm then this is for YOU! As well as a full "Run and Gun" coverage of the event, I will also prepare an onsite studio-like set up which will capture you and your magical moment in another light! (Quite literally). As well stunning photos for family and group shots! 
-                                        </p>
-                                        <ul class="grid-container">
-                                            <li>4 hours of photography coverage</li>
-                                            <li>Studio set up</li>
-                                            <li>10 free polaroids</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <input type="radio"  class="display-none" name="package" id="package-02" checked>
-                        <li>
-                            <label for="package-02">
-                                <div class="grid-container package-item">
-                                    <h5>Package #2</h5>
-                                    <h5>$350.00</h5>
-                                    <div class="grid-container package-desc">
-                                        <p class="package-blurb">
-                                            This is my most popular package as the timeframe usually covers enough of the event while including most of what package 1 offers.
-                                        </p>
-                                        <ul class="grid-container">
-                                            <li>3 hours of photography coverage</li>
-                                            <li>Studio set up</li>
-                                            <li>10 free polaroids</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <input type="radio"  class="display-none" name="package" id="package-03">
-                        <li>
-                            <label for="package-03">
-                                <div class="grid-container package-item">
-                                    <h5>Package #3</h5>
-                                    <h5>$300.00</h5>
-                                    <div class="grid-container package-desc">
-                                        <p class="package-blurb">
-                                            Keeping it simple as possible, but not plain! Traditional "Run and Gun" style! Perfect for those wanting straight forward event photos and more budget friendly! If that's the case - this is it! 
-                                        </p>
-                                        <ul class="grid-container">
-                                            <li>3 hours of photography coverage</li>
-                                            <li>10 free polaroids</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                    </ul>
-                    <div id="disclaimer" class="grid-container">
-                        <p>A consultation with photographer is recommended prior to booking!</p>
-                        <img class="logo-container" src="assets/img/svg/logo-black-and-white.svg" alt="Ding Dong Photography">
+                    <div class="grid-container section-footer">
+                    </div>
+                </section>
+                
+                <section class="grid-container" id="about">
+                    <div class="grid-container section-header">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="grid-container section-content">
+                        <h3>A bet worth making</h3>
                         <p>
-                            Booking is not confirmed until the deposit is received. 50% non refundable deposit to own the date. I have a "first come, first serve" policy for booking and confirmation.
+                            Certainly elsewhere my do allowance at. 
+                            The address farther six hearted hundred towards husband. Are securing off occasion remember daughter replying. Held that feel his see own yet. Strangers ye to he sometimes propriety in. She right plate seven has. Bed who perceive judgment did marianne. Too cultivated use solicitude frequently. Dashwood likewise up consider continue entrance ladyship oh. Wrong guest given purse power is no. Friendship to connection an am considered difficulty. Country met pursuit lasting moments why calling certain the.
+                            Middletons boisterous our way understood law. Among state cease how and sight since shall. Material did pleasure breeding our humanity she contempt had. So ye really mutual no cousin piqued summer result.
                         </p>
+                        
+                        <img src="assets/img/photos/profile.jpg" alt="Dong Dam">
                     </div>
-                </div>
-                <div class="grid-container section-footer">
-                </div>
-            </section>
-            
-            <section class="grid-container" id="contact">
-                <div class="grid-container section-header">
-                    <h2>Contact Me</h2>
-                </div>
-                <div class="grid-container section-content">
-                    <form action="enquiry.php" method="get" class="grid-container">
-                        <input type="text" name="name" id="name-input" placeholder="Name">
-                        <input type="text" name="phone" id="phone-input" placeholder="Phone Number">
-                        <input type="email" name="email" id="email-input" placeholder="Email">
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
-                        <input type="submit" value="Send!" name="submit">
-                    </form>
-                    <div>
-                        <i class="fas fa-envelope"></i>
-                        <p>Your questions are important to me and I will strive to respond within 48 hours! Thank you!</p>
+                    <div class="grid-container section-footer">
                     </div>
-                </div>
-                <div class="grid-container section-footer">
-                </div>
-            </section>
-            
-            <footer class="grid-container">
-                <img src="assets/img/svg/logo-black-and-white.svg" alt="Ding Dong Photography Logo">
-                <ul class="grid-container">
-                    <li><i class="fas fa-mobile-alt"></i>0432 231 210</li>
-                    <li><i class="fab fa-facebook-square"></i>@DingDongPhotography</li>
-                    <li><i class="fas fa-envelope"></i>dingdongphotography@outlook.com</li>
-                </ul>
-            </footer>
-            
-        </main>
-
+                </section>
+                
+                <section class="grid-container" id="portfolio">
+                    <div class="grid-container section-header">
+                        <h2>From My Portfolio</h2>
+                    </div>
+                    <div class="grid-container section-content">
+                        <div class="grid-container picture-frame">
+                            <h4>Good food!</h4>
+                            <img src="" alt="Good food!"> 
+                            <h6>2019-01-01</h6>
+                        </div>
+                        
+                        <div class="grid-container picture-frame">
+                            <h4>A bird on a post</h4>
+                            <img src="" alt="A bird on a post"> 
+                            <h6>2018-12-24</h6>
+                        </div>
+                        
+                        <div class="grid-container picture-frame">
+                            <h4>Nothing sweeter!</h4>
+                            <img src="" alt="Nothing sweeter!"> 
+                            <h6>2015-03-08</h6>
+                        </div>
+                        
+                        <div class="grid-container picture-frame">
+                            <h4>Beautiful in white</h4>
+                            <img src="" alt="Beautiful in white"> 
+                            <h6>2015-11-17</h6>
+                        </div>
+                        
+                        <h4>See more-></h4>
+                        
+                    </div>
+                    <div class="grid-container section-footer">
+                    </div>
+                </section>
+                
+                <section class="grid-container" id="services">
+                    <div class="grid-container section-header">
+                        <h2>My Services</h2>
+                    </div>
+                    <div class="grid-container section-content">
+                        <div class="grid-container" id="package-inclusion-container">
+                            <h3>Catering for your needs!</h3>
+                            <strong>All packages include:</strong>
+                            <ol>
+                                <li>Online gallery hosting and ZIP file download</li> 
+                                <li>Printable high resolution files</li>
+                                <li>Early arrival for preparation</li>   
+                                <li>Editing of all images</li>
+                                <li>Travel cost (unless 30 minutes away from Heidelberg, VIC)</li>
+                            </ol>
+                            <hr>
+                            <strong>Extra services</strong>
+                            <ul>
+                                <li>$150.00/hr after 4 hours of photography coverage</li>
+                            </ul>
+                            <hr>
+                            <strong>Hours of service</strong>
+                            <ul>
+                                <li>Available as early as you need me all the way to midnight</li>
+                            </ul>
+                                
+                        </div>
+                        <ul class="grid-container">
+                            <input type="radio"  class="display-none" name="package" id="package-01">
+                            <li>
+                                <label for="package-01">
+                                    <div class="grid-container package-item">
+                                        <h5>Package #1</h5>
+                                        <h5>$450.00</h5>
+                                        <div class="grid-container package-desc">
+                                            <p class="package-blurb">
+                                                If you want something different from the norm then this is for YOU! As well as a full "Run and Gun" coverage of the event, I will also prepare an onsite studio-like set up which will capture you and your magical moment in another light! (Quite literally). As well stunning photos for family and group shots! 
+                                            </p>
+                                            <ul class="grid-container">
+                                                <li>4 hours of photography coverage</li>
+                                                <li>Studio set up</li>
+                                                <li>10 free polaroids</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <input type="radio"  class="display-none" name="package" id="package-02" checked>
+                            <li>
+                                <label for="package-02">
+                                    <div class="grid-container package-item">
+                                        <h5>Package #2</h5>
+                                        <h5>$350.00</h5>
+                                        <div class="grid-container package-desc">
+                                            <p class="package-blurb">
+                                                This is my most popular package as the timeframe usually covers enough of the event while including most of what package 1 offers.
+                                            </p>
+                                            <ul class="grid-container">
+                                                <li>3 hours of photography coverage</li>
+                                                <li>Studio set up</li>
+                                                <li>10 free polaroids</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <input type="radio"  class="display-none" name="package" id="package-03">
+                            <li>
+                                <label for="package-03">
+                                    <div class="grid-container package-item">
+                                        <h5>Package #3</h5>
+                                        <h5>$300.00</h5>
+                                        <div class="grid-container package-desc">
+                                            <p class="package-blurb">
+                                                Keeping it simple as possible, but not plain! Traditional "Run and Gun" style! Perfect for those wanting straight forward event photos and more budget friendly! If that's the case - this is it! 
+                                            </p>
+                                            <ul class="grid-container">
+                                                <li>3 hours of photography coverage</li>
+                                                <li>10 free polaroids</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                        <div id="disclaimer" class="grid-container">
+                            <p>A consultation with photographer is recommended prior to booking!</p>
+                            <img class="logo-container" src="assets/img/svg/logo-black-and-white.svg" alt="Ding Dong Photography">
+                            <p>
+                                Booking is not confirmed until the deposit is received. 50% non refundable deposit to own the date. I have a "first come, first serve" policy for booking and confirmation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-container section-footer">
+                    </div>
+                </section>
+                
+                <section class="grid-container" id="contact">
+                    <div class="grid-container section-header">
+                        <h2>Contact Me</h2>
+                    </div>
+                    <div class="grid-container section-content">
+                        <form action="enquiry.php" method="get" class="grid-container">
+                            <input type="text" name="name" id="name-input" placeholder="Name">
+                            <input type="text" name="phone" id="phone-input" placeholder="Phone Number">
+                            <input type="email" name="email" id="email-input" placeholder="Email">
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                            <input type="submit" value="Send!" name="submit">
+                        </form>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <p>Your questions are important to me and I will strive to respond within 48 hours! Thank you!</p>
+                        </div>
+                    </div>
+                    <div class="grid-container section-footer">
+                    </div>
+                </section>
+                
+                <footer class="grid-container">
+                    <img src="assets/img/svg/logo-black-and-white.svg" alt="Ding Dong Photography Logo">
+                    <ul class="grid-container">
+                        <li><i class="fas fa-mobile-alt"></i>0432 231 210</li>
+                        <li><i class="fab fa-facebook-square"></i>@DingDongPhotography</li>
+                        <li><i class="fas fa-envelope"></i>dingdongphotography@outlook.com</li>
+                    </ul>
+                </footer>
+                
+            </main>
+        </label>
         <script
             src="https://code.jquery.com/jquery-2.2.4.js"
             integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="

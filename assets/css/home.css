@@ -79,7 +79,7 @@ input, textarea
     border-radius: 2px;
 }
 
-input[type="text"], input[type="email"], input[type="submit"], textarea
+input[type="text"], input[type="email"], input[type="submit"], textarea, input[type="password"]
 {
     padding: var(--sm-padding) var(--xsm-padding);
     font-size: 0.9em;
@@ -101,7 +101,7 @@ input[type="submit"]:hover
     background-color: white;
 }
 
-input[type="text"]:focus, input[type="text"]:hover, input[type="email"]:focus, input[type="email"]:hover, textarea:hover, textarea:focus
+input[type="text"]:focus, input[type="password"]:focus, input[type="text"]:hover, input[type="email"]:focus, input[type="email"]:hover, textarea:hover, textarea:focus
 {
     border: 1px solid var(--pink-accent-color);
     font-size: 0.9em;
@@ -126,7 +126,7 @@ nav
     box-shadow: 0px 3px 12px var(--box-shadow-color);
 }
 
-#menu
+.drop-down-menu
 {
     position: fixed;
     overflow: hidden;
@@ -138,9 +138,10 @@ nav
     grid-auto-rows: 50px;
     background-color: white;
     z-index: 900;
+    box-shadow: 0 3px 3px var(--box-shadow-color);
 }
 
-#menu-controller:checked + ul#menu
+nav input[type="radio"]:checked + .drop-down-menu
 {
     max-height: 500px;
     transition: 0.2s; 
@@ -150,6 +151,27 @@ nav
 {
     text-decoration: none;
     text-transform: capitalize;
+}
+
+#login-container
+{
+    grid-template-rows: 50px auto;
+    background-color: white;
+}
+
+#login-container h5
+{
+    align-self: end;
+}
+
+#login-container form
+{
+    margin: var(--md-margin);
+}
+
+#login-container form > *
+{
+    margin-top: var(--sm-margin);
 }
 
 ul li
@@ -191,7 +213,7 @@ nav .logo-container
     transform: rotate(180deg);
 }
 
-#login-nav
+#login-nav-label
 {
     grid-column: 4 / 5;
 }
@@ -202,7 +224,7 @@ nav .logo-container
     background-color: var(--pink-accent-color);
 }
 
-#hamburger-nav
+#hamburger-nav-label
 {
     grid-column: 5 / 6;
     background-color: var(--yellow-accent-color);
