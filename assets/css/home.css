@@ -187,7 +187,6 @@ nav
     transition: 0.2s;
 }
 
-
 .drop-down-menu li a:hover:before
 {
     width: 50px;
@@ -197,6 +196,11 @@ nav
 {
     border-bottom: none;
 } 
+
+#menu-nav + ul.drop-down-menu > li:last-child
+{
+    display: none;
+}
 
 nav input[type="radio"]:checked + .drop-down-menu
 {
@@ -236,11 +240,16 @@ ul li
     list-style: none;
 }
 
-.logo-container, #login-nav, #hamburger-nav
+.logo-container, #login-nav, #hamburger-nav, #login-nav-word
 {
     line-height: 50px;
     cursor: pointer;
     transition: 0.2s;
+}
+
+#login-nav-word
+{
+    display: none;
 }
 
 .logo-container
@@ -573,13 +582,70 @@ section
     {
         display: none;
     }
+
+    nav 
+    {
+        grid-template-columns: var(--md-margin) 50px auto 100px 50px;
+    }
+
+    #login-nav-word
+    {
+        display: block;
+    }
+
+    #login-nav-word:hover
+    {
+        background-color: var(--pink-accent-color);
+        color: white;
+    }
 }
 
 @media (min-width: 769px)
 {
-    #hamburger-nav
+    #hamburger-nav-label, #login-nav-label
     {
         display: none;
     }
+
+    nav 
+    {
+        grid-template-columns: var(--md-margin) 50px auto 400px;
+    }
+
+    #nav-menu
+    {
+        grid-column: 4;
+        grid-template-columns: repeat(5, auto);
+        display: grid;
+        position: relative;
+        z-index: 2000;
+        max-height: 50px;
+        top: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    #nav-menu li a
+    {
+        border: none !important;
+    }
+
+    #nav-menu > li:last-child
+    {
+        display: block !important;
+    }
+
+    #nav-menu > li a:before 
+    {
+        top: calc(100% - 3px);
+        height: 3px;
+    }
+
+    #nav-menu > li:hover a:before 
+    {
+        width: 100%;
+    }
+
+
 }
 

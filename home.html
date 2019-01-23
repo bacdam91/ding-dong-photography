@@ -26,6 +26,9 @@
                 <div id="login-nav">
                     <i class="fas fa-user"></i>
                 </div>
+                <div id="login-nav-word">
+                    <a>Client Login</a>
+                </div>
             </label>
 
             <input class="display-none" type="radio" name="menu-controller" id="menu-login">
@@ -45,11 +48,12 @@
             </label>
 
             <input class="display-none" type="radio" name="menu-controller" id="menu-nav">
-            <ul class="grid-container drop-down-menu">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">My Portfolio</a></li>
-                <li><a href="#services">My Services</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+            <ul class="grid-container drop-down-menu" id="nav-menu">
+                <li><a class="nav-able" href="#about">About Me</a></li>
+                <li><a class="nav-able" href="#portfolio">My Portfolio</a></li>
+                <li><a class="nav-able" href="#services">My Services</a></li>
+                <li><a class="nav-able" href="#contact">Contact Me</a></li>
+                <li><a class="nav-able" href="#">Client Login</a></li>
             </ul>
             
             <input class="display-none" type="radio" name="menu-controller" id="menu-main" checked>
@@ -261,5 +265,7 @@
             integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
             crossorigin="anonymous"></script>
         </script>
+
+        <script src="assets/js/home.js"></script>
     </body>
 </html>

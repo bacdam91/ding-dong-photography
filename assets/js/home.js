@@ -1,35 +1,15 @@
 $(document).ready(function()
 {  
-    
-    $("body").click(function(event)
+    $(".nav-able").click(function(event)
     {
-        if($(window).width() < 769)
-        {
-            event.stopPropagation();
-            $("#menu").slideUp();
-            $("#hamburger-nav").removeClass("ham-nav-clicked");
-        }
-    });
+        var target = $(this).attr("href");
+        var pos = $(target).offset();
+        $("html, body").stop().animate({
+            scrollTop : pos.top - 50
+        }, 700);
 
-    $(window).resize(function() {
-        if($(window).width() >= 769)
-        {
-            $("#menu").show();
-        }  
-    });
-     
+        $("#menu-nav").attr("checked", false);
 
-    $("#hamburger-nav").click(function(event)
-    {
-        event.stopPropagation();
-        toggleToolbar();
-    });
-
-    
+        event.preventDefault();
+    });   
 });
-
-function toggleToolbar()
-{
-    $("#menu").slideToggle();
-    $("#hamburger-nav").toggleClass("ham-nav-clicked");
-}
