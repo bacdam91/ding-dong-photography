@@ -120,7 +120,7 @@ input[type="submit"]:hover
     background-color: white;
 }
 
-input[type="text"]:focus, input[type="password"]:focus, input[type="text"]:hover, input[type="email"]:focus, input[type="email"]:hover, textarea:hover, textarea:focus
+input[type="text"]:focus, input[type="password"]:focus, input[type="text"]:hover, input[type="email"]:focus, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, textarea:focus
 {
     border: 1px solid var(--pink-accent-color);
     font-size: 0.9em;
@@ -158,7 +158,45 @@ nav
     background-color: white;
     z-index: 900;
     box-shadow: 0 3px 3px var(--box-shadow-color);
+    align-content: center;
 }
+
+.drop-down-menu li a 
+{
+    display: block;
+    position: relative;
+    color: var(--footer-color-solid);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    border-bottom: 1px solid var(--bg-color);
+}
+
+.drop-down-menu li a:before
+{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--pink-accent-color);
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.2s;
+}
+
+
+.drop-down-menu li a:hover:before
+{
+    width: 50px;
+}
+
+.drop-down-menu li:last-child a
+{
+    border-bottom: none;
+} 
 
 nav input[type="radio"]:checked + .drop-down-menu
 {
@@ -446,13 +484,6 @@ section
     background: var(--footer-color-gradient);
     color: white;
     padding-left: var(--sm-padding);
-}
-
-.package-item > h5:first-child:hover
-{
-    color: var(--footer-color-solid);
-    background: white;
-    border: 1px solid var(--bg-color);
 }
 
 .package-item > h5:nth-child(2)
