@@ -657,6 +657,7 @@ div.wrapper > img
         height: 100%;
         overflow: hidden;
         grid-template-rows: 50px auto 100px 50px;
+        width: 100%;
     }
 
     main div.wrapper
