@@ -38,7 +38,7 @@ html, body
     height: 100%;
 }
 
-main
+main, main div.wrapper
 {
     width: 100%;
     grid-template-columns: 1fr;
@@ -576,8 +576,14 @@ section
     color: #595959;
 }
 
+div.wrapper > img
+{
+    display: none;
+}
+
 @media (min-width: 426px)
 {
+
     #login-nav
     {
         display: none;
@@ -646,6 +652,108 @@ section
         width: 100%;
     }
 
+    main 
+    {
+        height: 100%;
+        overflow: hidden;
+        grid-template-rows: 50px auto 100px 50px;
+    }
 
+    main div.wrapper
+    {
+        grid-row: 2;
+        display: block !important;
+        position: absolute;
+        left: 0;
+        bottom: 150px;
+        width: fit-content;
+        height: fit-content;
+        align-self: flex-end;
+        white-space: nowrap;
+        /*animation: slideshow 10s linear infinite;*/
+    }
+
+    @keyframes slideshow
+    {
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+
+    main div.wrapper:hover
+    {
+        animation-duration: 1000s
+    }
+
+    div.wrapper > *.gallery-item 
+    {
+        display: inline-block !important;
+        width: 120px;
+        border-radius: 50%;
+        height: 120px;
+        overflow: hidden !important;
+        margin: 0 10px;
+        box-shadow: 3px 3px 12px var(--box-shadow-color);
+        transition: 0.3s;
+        transform-origin: left bottom;
+        top: calc(100% - 120px);
+        filter: grayscale(50%);
+        cursor: pointer;
+    }
+
+    .active-item
+    {
+        height: 500px !important;
+        filter: grayscale(0) !important;
+        margin-bottom: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    div.wrapper > img 
+    {
+        
+        width: auto !important;
+        border-radius: 0 !important;
+    }
+
+    div.wrapper > *:hover
+    {
+        filter: grayscale(0%);
+        margin-bottom: 10px;
+    }
+
+    div.wrapper > img:hover
+    {
+        width: 280px;
+        height: 140px;
+    }
+
+    #jumbotron, #portfolio
+    {
+        display: none;
+    }
+
+    footer
+    {
+        display: block;
+        position: absolute;
+        top: calc(100% - 50px);
+        left: 0;
+        z-index: 1000;
+        height: 50px;
+        width: 100%;
+    }
+
+    footer img.logo-container
+    {
+        display: none;
+    }
+
+    footer > ul.grid-container
+    {
+        height: 50px;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
