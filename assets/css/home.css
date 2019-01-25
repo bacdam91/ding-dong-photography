@@ -618,6 +618,11 @@ div.wrapper > img
 
 @media (min-width: 769px)
 {
+    html, body
+    {
+        overflow: hidden;
+    }
+
     #hamburger-nav-label, #login-nav-label
     {
         display: none;
