@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css?family=Galada|Open+Sans+Condensed:300,300i|Yeseva+One" 
         rel="stylesheet"> 
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/basic_ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 </head>
     <body>
@@ -75,11 +76,16 @@
                         <div class="grid-container section-header">
                             <!--This header is hidden behind the nav-bar so there is no content in here-->
                         </div>
-                        <div class="grid-container section-content">
-                            <!--This is where the jumbotron or other promotional offers will be displayed-->
-                            <ul class="gallery-spinner">
-                                <li class="spinner-item"><img src="" alt="sentry"></img></li>
-                            </ul>
+                        <!--<div class="grid-container section-content" id="jumbotron-gallery">-->
+                        <div class="grid-container section-content btd-gallery-wrapper" id="jumbotron-gallery">
+                           
+                            <ul class="btd-gallery">
+                                    <li class="btd-gallery-item"><img src="assets/img/photos/11855680_1002880236410228_8137500872792094426_n.jpg" alt=""></li>
+                                    <li class="btd-gallery-item"><img src="assets/img/photos/11900108_1486103251683245_6741280355179460409_o.jpg" alt=""></li>
+                                    <li class="btd-gallery-item"><img src="assets/img/photos/12132470_1029489193749332_5405831694202797821_o.jpg" alt=""></li>
+                                    <li class="btd-gallery-item"><img src="assets/img/photos/15327282_1340882752609973_5577633153660805713_n.jpg" alt=""></li>
+                                </ul>
+                                <div class="btd-lunchbox"></div>
                         </div>
                         <div class="grid-container section-footer">
                         </div>
@@ -286,7 +292,17 @@
             integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
             crossorigin="anonymous"></script>
         </script>
+        
 
         <script src="assets/js/home.js"></script>
+        <script src="assets/js/basic_ui.js"></script>
+        <script>
+        $(document).ready(function()
+        {
+            var myGallery = new BTDGallery("jumbotron-gallery");
+            myGallery.startSlideshow();
+            BTDGallery.addBreadcrumbListeners(myGallery);
+        });
+        </script>
     </body>
 </html>
